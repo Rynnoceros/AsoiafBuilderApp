@@ -3,7 +3,7 @@ import '../classes/attack.dart';
 import '../classes/ability.dart';
 
 // Combatable unit interface
-class CombatableUnit {
+class CombatBehavior {
   // List all the attacks the unit can make
   List<Attack> attacks() {}
 

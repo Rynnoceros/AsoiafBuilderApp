@@ -1,16 +1,15 @@
 import '../enums/attack_type.dart';
 import '../interfaces/attack_interface.dart';
-import 'dices_to_roll.dart';
 
 // Attack class
 class Attack implements AttackInterface {
 
   // attributes
   AttackType _type;
-  List<DicesToRoll> _attack;
+  Map<int, int> _attack;
   
   // Constructor
-  Attack({AttackType type, List<DicesToRoll> attack}) {
+  Attack({AttackType type, Map<int, int> attack}) {
     setType(type);
     setAttack(attack);
   }
@@ -25,11 +24,11 @@ class Attack implements AttackInterface {
   }
   
   // Getter and setter for attack
-  List<DicesToRoll> getAttack() {
+  Map<int, int> getAttack() {
     return _attack;
   }
 
-  void setAttack(List<DicesToRoll> attack) {
+  void setAttack(Map<int, int> attack) {
     _attack = attack;
   }
 }
