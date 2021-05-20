@@ -3,6 +3,6 @@ import '../classes/dices_to_roll.dart';
 
 // Interface that describes an attack
 class AttackInterface {
-  AttackType type() {}
-  List<DicesToRoll> attackValue() {}
+  AttackType getType() {}
+  List<DicesToRoll> getAttack() {}
 }

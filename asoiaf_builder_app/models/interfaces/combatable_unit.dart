@@ -1,4 +1,6 @@
 import '../enums/combat_type.dart';
+import '../classes/attack.dart';
+import '../classes/ability.dart';
 
 // Combatable unit interface
 class CombatableUnit {

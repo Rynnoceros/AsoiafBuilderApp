@@ -12,11 +12,11 @@ class Attack implements AttackInterface {
   // Constructor
   Attack({AttackType type, List<DicesToRoll> attack}) {
     setType(type);
-    setAttackValue(attack);
+    setAttack(attack);
   }
 
   // Getter and Setter for type
-  AttackType type() {
+  AttackType getType() {
     return _type;
   }
 
@@ -25,11 +25,11 @@ class Attack implements AttackInterface {
   }
   
   // Getter and setter for attack
-  List<DicesToRoll> attackValue() {
+  List<DicesToRoll> getAttack() {
     return _attack;
   }
 
-  void setAttackValue(List<DicesToRoll> attack) {
+  void setAttack(List<DicesToRoll> attack) {
     _attack = attack;
   }
 }
