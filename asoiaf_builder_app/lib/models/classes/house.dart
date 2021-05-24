@@ -1,31 +1,24 @@
 // House class
 class House {
   // Attributes
-  String _name;
+  final String _name;
 
-  String _emblemPicture;
+  final String _emblemPicture;
 
   // Constructor
-  House({String name, String emblemPicture}) {
-    setName(name);
-    setEmblemPicture(emblemPicture);
-  }
+  House(this._name, this._emblemPicture);
 
-  // Getter and setter for name
-  String getName() {
-    return _name;
-  }
+  // Constructor from json
+  House.fromJson(Map<String, dynamic> json)
+    : _name = json['name'],
+      _emblemPicture = json['emblemPicture'];
 
-  void setName(String name) {
-    _name = name;
-  }
-
-  // Getter and setter for emblem
+  // Getters
   String getEmblemPicture() {
     return _emblemPicture;
   }
 
-  void setEmblemPicture(emblemPicture) {
-    _emblemPicture = emblemPicture;
+  String getName() {
+    return _name;
   }
 }

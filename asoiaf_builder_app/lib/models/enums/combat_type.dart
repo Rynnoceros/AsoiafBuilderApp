@@ -1,5 +1,5 @@
 // Enumerations of all existing unit types
-enum CombatUnitType {
+enum CombatType {
   Infantry,
   Cavalry,
   Monster,

@@ -1,0 +1,36 @@
+{
+    "houses":[
+        { 
+            "name": "Stark",
+            "emblemPicture": "images/houses/Stark.png"
+        },
+        {
+            "name": "Lannister",
+            "emblemPicture": "images/houses/Lannister.png"
+        },
+        {
+            "name": "Night's watch",
+            "emblemPicture": "images/houses/Night's watch.png"
+        },
+        {
+            "name": "Free Folk",
+            "emblemPicture": "images/houses/Free Folk.png"
+        },
+        {
+            "name": "Baratheon",
+            "emblemPicture": "images/houses/Baratheon.png"
+        },
+        {
+            "name": "Targaryen",
+            "emblemPicture": "images/houses/Targaryen.png"
+        },
+        {
+            "name": "Greyjoy",
+            "emblemPicture": "images/houses/Greyjoy.png"
+        },
+        {
+            "name": "Bolton",
+            "emblemPicture": "images/houses/Bolton.png"
+        }
+    ]
+}

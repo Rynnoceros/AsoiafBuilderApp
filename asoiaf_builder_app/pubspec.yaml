@@ -46,9 +46,17 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - images/houses/stark.png
+    - images/houses/Baratheon.png
+    - images/houses/Bolton.png
+    - images/houses/Free Folk.png
+    - images/houses/Greyjoy.png
+    - images/houses/Lannister.png
+    - images/houses/Night's watch.png
+    - images/houses/Stark.png
+    - images/houses/Targaryen.png
     - images/logo.png
     - images/background.jpg
+    - data/houses.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
