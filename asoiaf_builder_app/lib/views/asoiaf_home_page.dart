@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import '../helpers/database.dart';
 import 'houses_page.dart';
 
 // ASOAIF Home page class
 class AsoiafHomePage extends StatefulWidget {
-  AsoiafHomePage({Key key}) : super(key: key);
+  AsoiafHomePage({Key key}) : super(key: key) {
+    Database.getDatabase().load();
+  }
 
   @override
   _AsoiafHomePageState createState() => _AsoiafHomePageState();

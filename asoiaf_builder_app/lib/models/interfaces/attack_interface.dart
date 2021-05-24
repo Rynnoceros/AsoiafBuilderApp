@@ -4,4 +4,5 @@ import '../enums/attack_type.dart';
 class AttackInterface {
   AttackType getType() {}
   Map<int, int> getAttack() {}
+  int getScoreToHit() {}
 }

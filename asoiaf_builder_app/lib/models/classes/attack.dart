@@ -6,29 +6,25 @@ class Attack implements AttackInterface {
 
   // attributes
   AttackType _type;
+  int _scoreToHit;
   Map<int, int> _attack;
   
   // Constructor
-  Attack({AttackType type, Map<int, int> attack}) {
-    setType(type);
-    setAttack(attack);
-  }
+  Attack(Map<String, dynamic> json) 
+    : _type = json['type'],
+      _scoreToHit = json['scoreToHit'],
+      _attack = json['attack'];
 
-  // Getter and Setter for type
+  // Getters
   AttackType getType() {
     return _type;
   }
 
-  void setType(AttackType type) {
-    _type = type;
-  }
-  
-  // Getter and setter for attack
   Map<int, int> getAttack() {
     return _attack;
   }
 
-  void setAttack(Map<int, int> attack) {
-    _attack = attack;
+  int getScoreToHit() {
+    return _scoreToHit;
   }
 }

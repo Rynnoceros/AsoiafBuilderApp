@@ -1,27 +1,18 @@
 import 'unit.dart';
-import '../enums/unit_type.dart';
 import '../interfaces/combat_behavior.dart';
-import 'house.dart';
 
 // Combat unit class
 class CombatUnit extends Unit {
   // Attributes
-  CombatBehavior _combatable;
+  final CombatBehavior _combat_behavior;
 
   // Constructor
-  CombatUnit({CombatBehavior combatable, String name, String description, UnitType type, 
-              int cost, House house, String frontPicture, String backPicture}) : 
-              super(name:name, description: description, type:type, cost:cost, house:house, 
-                    frontPicture: frontPicture, backPicture: backPicture) {
-    setCombatable(combatable);
-  }
-
+  CombatUnit.fromJSON(Map<String, dynamic> json) 
+    : _combat_behavior = CombatBehavior.fromJSON(json['combat_behavior']),
+      super.fromJSON(json);
+  
   // Getter and setter for combatable
-  CombatBehavior getCombatable() {
-    return _combatable;
-  }
-
-  void setCombatable(CombatBehavior combatable) {
-    _combatable = combatable;
+  CombatBehavior getCombatBehavior() {
+    return _combat_behavior;
   }
 }

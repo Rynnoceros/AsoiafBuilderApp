@@ -9,7 +9,7 @@ class House {
   House(this._name, this._emblemPicture);
 
   // Constructor from json
-  House.fromJson(Map<String, dynamic> json)
+  House.fromJSON(Map<String, dynamic> json)
     : _name = json['name'],
       _emblemPicture = json['emblemPicture'];
 

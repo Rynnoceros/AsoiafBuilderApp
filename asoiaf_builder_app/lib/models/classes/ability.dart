@@ -4,30 +4,26 @@ import '../interfaces/ability_interface.dart';
 // Ability class
 class Ability implements AbilityInterface {
   // Attributes
+  String _name;
   AbilityType _type;
   String _description;
 
   // Constructor
-  Ability({AbilityType type, String description}) {
-    setType(type);
-    setDescription(description);
-  }
+  Ability.fromJSON(Map<String, dynamic> json)
+      : _name = json['name'],
+        _type = json['type'],
+        _description = json['description'];
 
-  // Getter and setter for type
+  // Getters
   AbilityType getType() {
     return _type;
   }
 
-  void setType(type) {
-    _type = type;
-  }
-
-  // Getter and setter for description
   String getDescription() {
     return _description;
   }
 
-  void setDescription(description) {
-    _description = description;
+  String getName() {
+    return _name;
   }
 }

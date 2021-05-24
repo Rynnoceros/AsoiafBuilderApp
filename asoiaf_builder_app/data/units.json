@@ -1,0 +1,42 @@
+{
+    "units":[
+        {
+            "name": "Stark Sworn Swords",
+            "description": "blabla",
+            "type": 0,
+            "cost": 5,
+            "house": {
+                "name": "Stark",
+                "emblemPicture": "images/houses/Stark.png"
+            },
+            "frontPicture": "images/houses/combat_units/Stark Sworn Swords_frontPicture",
+            "backPicture": "images/houses/combat_units/Stark Sworn Swords_frontPicture",
+            "combat_behavior": {
+                "attacks": [
+                    {
+                        "type": 0,
+                        "scoreHit": 4,
+                        "attack": [
+                            [3, 8],
+                            [2, 6],
+                            [1, 5]
+                        ]
+                    }
+                ],
+                "numberOfMen": 12,
+                "woundsPerMen": 1,
+                "defense": 4,
+                "morale": 6,
+                "speed": 5,
+                "abilities": [
+                    {
+                        "name": "Stark Fury",
+                        "type": 0,
+                        "description": "Before rolling dice, this attack may gain +1 to Hit and Critical Blow (Rolls of 6 deal 2 Hits). If it does, after this attack has been completed, unless this unit only has 1 remaining rank, it suffers D3 Wounds"
+                    }
+                ],
+                "type": 0
+            }
+        }
+    ]
+}
