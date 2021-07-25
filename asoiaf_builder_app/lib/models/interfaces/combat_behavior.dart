@@ -23,26 +23,42 @@ class CombatBehavior {
         _combatType = CombatType.values[json['type']];
 
   // List all the attacks the unit can make
-  List<Attack> attacks() {}
+  List<Attack> attacks() {
+    throw ("not implemented");
+  }
 
   // Number of miniatures in the unit
-  int numberOfMen() {}
+  int numberOfMen() {
+    throw ("not implemented");
+  }
 
   // Number of wounds assignable to a miniature
-  int woundsPerMen() {}
+  int woundsPerMen() {
+    throw ("not implemented");
+  }
 
   // Defense value
-  int defense() {}
+  int defense() {
+    throw ("not implemented");
+  }
 
   // Morale value
-  int morale() {}
+  int morale() {
+    throw ("not implemented");
+  }
 
   // Speed Value
-  int speed() {}
+  int speed() {
+    throw ("not implemented");
+  }
 
   // List of abilities that a unit behaves
-  List<Ability> abilities() {}
+  List<Ability> abilities() {
+    throw ("not implemented");
+  }
 
   // The type of the combat unit
-  CombatType type() {} 
+  CombatType type() {
+    throw ("not implemented");
+  }
 }
