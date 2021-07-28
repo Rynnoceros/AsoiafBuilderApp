@@ -1,3 +1,4 @@
+import 'package:asoiaf_builder_app/widgets/attack_roll_widget.dart';
 import 'package:asoiaf_builder_app/widgets/stat_widget.dart';
 import 'package:flutter/material.dart';
 import '../models/classes/unit.dart';
@@ -17,9 +18,9 @@ class _UnitDisplayPageState extends State<UnitDisplayPage> {
       appBar: AppBar(
         title: Text('Unit Display'),
       ),
-      body: StatisticWidget(
-        image: 'images/abilities/Innate.png',
-        stat: '3',
+      body: AttackRollWidget(
+        scoreToHit: '4+',
+        diceRolls: {2: 7, 1: 5},
       ),
       backgroundColor: Color.fromRGBO(0, 0, 0, 1.0),
     );

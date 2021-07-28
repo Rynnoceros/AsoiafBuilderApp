@@ -20,29 +20,35 @@ class Database {
 
   // Load houses from json file
   Future _loadHouses() async {
-    return rootBundle.loadString('data/houses.json')
-          .then((jsonHouses) {
-            Map<String, dynamic> houses = jsonDecode(jsonHouses);
-              for (var house in houses['houses']) {
-                _houses.add(House.fromJSON(house));
-              }
-          });
+    return rootBundle.loadString('data/houses.json').then((jsonHouses) {
+      Map<String, dynamic> houses = jsonDecode(jsonHouses);
+      _houses = [];
+      for (var house in houses['houses']) {
+        _houses.add(House.fromJSON(house));
+      }
+    });
   }
 
   // Load units from json file
   Future _loadUnits() async {
-    return rootBundle.loadString('data/units.json')
-          .then((jsonUnits) {
-            Map<String, dynamic> units = jsonDecode(jsonUnits);
-            for (var unit in units['units']) {
-              var type = UnitType.values[unit['type']];
-              switch (type) {
-                case UnitType.CombatUnit: _units.add(CombatUnit.fromJSON(unit)); break;
-                case UnitType.Attachment: _units.add(Attachment.fromJSON(unit)); break;
-                case UnitType.NonCombatUnit: _units.add(NonCombatUnit.fromJSON(unit)); break;
-              }
-            }
-          });
+    return rootBundle.loadString('data/units.json').then((jsonUnits) {
+      Map<String, dynamic> units = jsonDecode(jsonUnits);
+      _units = [];
+      for (var unit in units['units']) {
+        var type = UnitType.values[unit['type']];
+        switch (type) {
+          case UnitType.CombatUnit:
+            _units.add(CombatUnit.fromJSON(unit));
+            break;
+          case UnitType.Attachment:
+            _units.add(Attachment.fromJSON(unit));
+            break;
+          case UnitType.NonCombatUnit:
+            _units.add(NonCombatUnit.fromJSON(unit));
+            break;
+        }
+      }
+    });
   }
 
   void load() {

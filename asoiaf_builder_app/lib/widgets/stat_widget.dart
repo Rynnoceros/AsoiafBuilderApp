@@ -1,3 +1,4 @@
+import 'package:asoiaf_builder_app/helpers/asoiaf_theme.dart';
 import 'package:flutter/material.dart';
 
 // Widget that will be used to display the statistics of a unit
@@ -24,14 +25,9 @@ class StatisticWidget extends StatelessWidget {
     return Stack(alignment: Alignment.center, children: [
       Image.asset(this.image, width: 100, height: 63),
       Padding(
-          padding: textPadding,
-          child: Text(
-            this.stat,
-            style: const TextStyle(
-                color: Color.fromRGBO(255, 255, 255, 1.0),
-                fontWeight: FontWeight.bold,
-                fontSize: 20),
-          )),
+        padding: textPadding,
+        child: Text(this.stat, style: AsoiafTheme.textStyle),
+      ),
     ]);
   }
 }
