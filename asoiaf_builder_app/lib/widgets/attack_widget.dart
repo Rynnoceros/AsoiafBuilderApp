@@ -28,7 +28,17 @@ class AttackWidget extends StatelessWidget {
             padding: EdgeInsets.fromLTRB(0, 75, 20, 0),
             child: AttackRollWidget(
                 diceRolls: this.attack.getAttack(),
-                scoreToHit: this.attack.getScoreToHit()))
+                scoreToHit: this.attack.getScoreToHit())),
+        Padding(
+            padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
+            child: Text(
+              this.attack.getName().toUpperCase(),
+              style: TextStyle(
+                  color: Color.fromRGBO(0, 0, 0, 1.0),
+                  fontStyle: FontStyle.italic,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold),
+            ))
       ],
     );
   }
