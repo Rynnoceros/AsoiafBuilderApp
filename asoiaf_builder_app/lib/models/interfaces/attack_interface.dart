@@ -10,7 +10,7 @@ class AttackInterface {
     throw ("not implemented");
   }
 
-  int getScoreToHit() {
+  String getScoreToHit() {
     throw ("not implemented");
   }
 }

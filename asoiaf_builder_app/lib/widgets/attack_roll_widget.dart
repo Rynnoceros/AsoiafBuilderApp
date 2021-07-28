@@ -49,7 +49,7 @@ class AttackRollWidget extends StatelessWidget {
                     : i == (this.diceRolls.length - 1)
                         ? Color.fromRGBO(240, 180, 105, 1.0)
                         : Color.fromRGBO(255, 40, 40, 1.0),
-                border: Border.all(style: BorderStyle.solid),
+                border: Border.all(style: BorderStyle.none),
                 borderRadius: BorderRadius.all(Radius.circular(5))),
             child: Text(this.diceRolls[i].toString(),
                 textAlign: TextAlign.center, style: AsoiafTheme.textStyle)),

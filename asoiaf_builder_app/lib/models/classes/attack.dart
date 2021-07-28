@@ -3,19 +3,24 @@ import '../interfaces/attack_interface.dart';
 
 // Attack class
 class Attack implements AttackInterface {
-
   // attributes
+  String _name;
   AttackType _type;
-  int _scoreToHit;
+  String _scoreToHit;
   Map<int, int> _attack;
-  
+
   // Constructor
-  Attack(Map<String, dynamic> json) 
-    : _type = json['type'],
-      _scoreToHit = json['scoreToHit'],
-      _attack = json['attack'];
+  Attack.fromJSON(Map<String, dynamic> json)
+      : _name = json['name'],
+        _type = json['type'],
+        _scoreToHit = json['scoreToHit'],
+        _attack = json['attack'];
 
   // Getters
+  String getName() {
+    return _name;
+  }
+
   AttackType getType() {
     return _type;
   }
@@ -24,7 +29,7 @@ class Attack implements AttackInterface {
     return _attack;
   }
 
-  int getScoreToHit() {
+  String getScoreToHit() {
     return _scoreToHit;
   }
 }
